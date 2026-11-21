@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0",
+  "reviewed_on": "2026-11-21",
+  "sources": [
+    {
+      "title": "Update proposal",
+      "url": "https://github.com/renovatebot/renovate",
+      "type": "upstream_repository",
+      "supports": "Discovers dependency updates and creates configurable change proposals.",
+      "authority": "upstream project maintainers",
+      "version_or_date": "moving upstream; reviewed 2026-11-21",
+      "claim_scope": "Discovers dependency updates and creates configurable change proposals.",
+      "does_not_support": "This source alone does not validate this guide's cross-project recommendation, local result, interoperability, or safety sufficiency."
+    },
+    {
+      "title": "Update proposal",
+      "url": "https://github.com/dependabot/dependabot-core",
+      "type": "upstream_repository",
+      "supports": "Library underlying Dependabot version/security updates.",
+      "authority": "upstream project maintainers",
+      "version_or_date": "moving upstream; reviewed 2026-11-21",
+      "claim_scope": "Library underlying Dependabot version/security updates.",
+      "does_not_support": "This source alone does not validate this guide's cross-project recommendation, local result, interoperability, or safety sufficiency."
+    },
+    {
+      "title": "Vulnerability matching",
+      "url": "https://github.com/google/osv-scanner",
+      "type": "upstream_repository",
+      "supports": "Matches dependencies/SBOMs to OSV vulnerability data.",
+      "authority": "upstream project maintainers",
+      "version_or_date": "moving upstream; reviewed 2026-11-21",
+      "claim_scope": "Matches dependencies/SBOMs to OSV vulnerability data.",
+      "does_not_support": "This source alone does not validate this guide's cross-project recommendation, local result, interoperability, or safety sufficiency."
+    },
+    {
+      "title": "Artifact/filesystem scan",
+      "url": "https://github.com/aquasecurity/trivy",
+      "type": "upstream_repository",
+      "supports": "Scans vulnerabilities, misconfigurations, secrets, licenses, and SBOM targets.",
+      "authority": "upstream project maintainers",
+      "version_or_date": "moving upstream; reviewed 2026-11-21",
+      "claim_scope": "Scans vulnerabilities, misconfigurations, secrets, licenses, and SBOM targets.",
+      "does_not_support": "This source alone does not validate this guide's cross-project recommendation, local result, interoperability, or safety sufficiency."
+    },
+    {
+      "title": "SBOM generation",
+      "url": "https://github.com/anchore/syft",
+      "type": "upstream_repository",
+      "supports": "Generates SBOMs from images and filesystems.",
+      "authority": "upstream project maintainers",
+      "version_or_date": "moving upstream; reviewed 2026-11-21",
+      "claim_scope": "Generates SBOMs from images and filesystems.",
+      "does_not_support": "This source alone does not validate this guide's cross-project recommendation, local result, interoperability, or safety sufficiency."
+    },
+    {
+      "title": "Vulnerability scan",
+      "url": "https://github.com/anchore/grype",
+      "type": "upstream_repository",
+      "supports": "Matches container/filesystem/SBOM components to vulnerability data.",
+      "authority": "upstream project maintainers",
+      "version_or_date": "moving upstream; reviewed 2026-11-21",
+      "claim_scope": "Matches container/filesystem/SBOM components to vulnerability data.",
+      "does_not_support": "This source alone does not validate this guide's cross-project recommendation, local result, interoperability, or safety sufficiency."
+    },
+    {
+      "title": "Policy and admission",
+      "url": "https://github.com/open-policy-agent/conftest",
+      "type": "upstream_repository",
+      "supports": "Tests structured configuration with Rego policies.",
+      "authority": "upstream project maintainers",
+      "version_or_date": "moving upstream; reviewed 2026-11-21",
+      "claim_scope": "Tests structured configuration with Rego policies.",
+      "does_not_support": "This source alone does not validate this guide's cross-project recommendation, local result, interoperability, or safety sufficiency."
+    },
+    {
+      "title": "Upstream posture",
+      "url": "https://github.com/ossf/scorecard",
+      "type": "upstream_repository",
+      "supports": "Checks repository security practices.",
+      "authority": "upstream project maintainers",
+      "version_or_date": "moving upstream; reviewed 2026-11-21",
+      "claim_scope": "Checks repository security practices.",
+      "does_not_support": "This source alone does not validate this guide's cross-project recommendation, local result, interoperability, or safety sufficiency."
+    }
+  ]
+}

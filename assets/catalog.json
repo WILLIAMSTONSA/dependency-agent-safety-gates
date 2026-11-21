@@ -1,0 +1,124 @@
+{
+  "schema_version": "1.0",
+  "profile": 13,
+  "repository": "dependency-agent-safety-gates",
+  "reviewed_on": "2026-11-21",
+  "comparison_axes": [
+    "Layer",
+    "Project",
+    "Role",
+    "Best use",
+    "Blind spot"
+  ],
+  "entries": [
+    {
+      "name": "Update proposal",
+      "role_or_focus": "Renovate",
+      "url": "https://github.com/renovatebot/renovate",
+      "supported_claim": "Discovers dependency updates and creates configurable change proposals.",
+      "best_use": "Broad ecosystem automation with grouping/scheduling policy.",
+      "important_boundary": "A proposed version can still be incompatible or malicious.",
+      "claim_status": {
+        "supported_claim": "source-backed",
+        "best_use": "author-recommendation",
+        "important_boundary": "author-analysis"
+      }
+    },
+    {
+      "name": "Update proposal",
+      "role_or_focus": "Dependabot Core",
+      "url": "https://github.com/dependabot/dependabot-core",
+      "supported_claim": "Library underlying Dependabot version/security updates.",
+      "best_use": "Understand supported ecosystems and update behavior.",
+      "important_boundary": "Repository-specific migration correctness.",
+      "claim_status": {
+        "supported_claim": "source-backed",
+        "best_use": "author-recommendation",
+        "important_boundary": "author-analysis"
+      }
+    },
+    {
+      "name": "Vulnerability matching",
+      "role_or_focus": "OSV-Scanner",
+      "url": "https://github.com/google/osv-scanner",
+      "supported_claim": "Matches dependencies/SBOMs to OSV vulnerability data.",
+      "best_use": "Check lockfile and SBOM changes.",
+      "important_boundary": "Unknown vulnerabilities and malicious-but-unreported packages.",
+      "claim_status": {
+        "supported_claim": "source-backed",
+        "best_use": "author-recommendation",
+        "important_boundary": "author-analysis"
+      }
+    },
+    {
+      "name": "Artifact/filesystem scan",
+      "role_or_focus": "Trivy",
+      "url": "https://github.com/aquasecurity/trivy",
+      "supported_claim": "Scans vulnerabilities, misconfigurations, secrets, licenses, and SBOM targets.",
+      "best_use": "Container/IaC/dependency evidence in one pipeline.",
+      "important_boundary": "Application compatibility and business logic.",
+      "claim_status": {
+        "supported_claim": "source-backed",
+        "best_use": "author-recommendation",
+        "important_boundary": "author-analysis"
+      }
+    },
+    {
+      "name": "SBOM generation",
+      "role_or_focus": "Syft",
+      "url": "https://github.com/anchore/syft",
+      "supported_claim": "Generates SBOMs from images and filesystems.",
+      "best_use": "Freeze before/after component inventory.",
+      "important_boundary": "Whether included components are vulnerable or allowed.",
+      "claim_status": {
+        "supported_claim": "source-backed",
+        "best_use": "author-recommendation",
+        "important_boundary": "author-analysis"
+      }
+    },
+    {
+      "name": "Vulnerability scan",
+      "role_or_focus": "Grype",
+      "url": "https://github.com/anchore/grype",
+      "supported_claim": "Matches container/filesystem/SBOM components to vulnerability data.",
+      "best_use": "Scan Syft or other supported inventories.",
+      "important_boundary": "Build provenance and runtime exploitability.",
+      "claim_status": {
+        "supported_claim": "source-backed",
+        "best_use": "author-recommendation",
+        "important_boundary": "author-analysis"
+      }
+    },
+    {
+      "name": "Policy and admission",
+      "role_or_focus": "Conftest",
+      "url": "https://github.com/open-policy-agent/conftest",
+      "supported_claim": "Tests structured configuration with Rego policies.",
+      "best_use": "Enforce organization rules on manifests and generated evidence.",
+      "important_boundary": "The correctness of policy assumptions.",
+      "claim_status": {
+        "supported_claim": "source-backed",
+        "best_use": "author-recommendation",
+        "important_boundary": "author-analysis"
+      }
+    },
+    {
+      "name": "Upstream posture",
+      "role_or_focus": "OpenSSF Scorecard",
+      "url": "https://github.com/ossf/scorecard",
+      "supported_claim": "Checks repository security practices.",
+      "best_use": "Review a newly added upstream or material dependency.",
+      "important_boundary": "Safety of a specific release or transitive graph.",
+      "claim_status": {
+        "supported_claim": "source-backed",
+        "best_use": "author-recommendation",
+        "important_boundary": "author-analysis"
+      }
+    }
+  ],
+  "field_provenance": {
+    "supported_claim": "source-backed at the cited URL, subject to the recorded review date/version",
+    "best_use": "author recommendation; requires local validation",
+    "important_boundary": "author analysis unless the linked source explicitly states it"
+  }
+}
