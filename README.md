@@ -1,5 +1,10 @@
 # Safety Gates for Agent-Proposed Dependency Updates
 
+
+> **Decision:** Use these gates when a bot or agent proposes a dependency update that needs isolated evidence, human ownership, canarying, and rollback; skip them if the proposer is also expected to self-approve.
+>
+> **For:** dependency automation owners, maintainers, and software-supply-chain reviewers  ·  **Not for:** unreviewed auto-merge pipelines or teams without a rollback path
+
 A dependency bot or coding agent may propose a change; it must not grant itself approval. Treat every update as a state machine with independent evidence, human ownership, and a tested rollback.
 
 ## Safety envelope
@@ -88,6 +93,14 @@ Change the gate when an observed incident or ecosystem behavior changes required
 
 Sources: [`sources/sources.json`](sources/sources.json).
 
+## Adjacent guides
+
+- [ai-patch-review-playbook](https://github.com/ColomboEA/ai-patch-review-playbook) — Use it for the broader diff review around changes that are not limited to dependencies.
+- [open-source-ai-code-provenance](https://github.com/ankr989/open-source-ai-code-provenance) — Use it when the accepted update needs a bounded provenance statement.
+- [mcp-server-security-checklist](https://github.com/CoMiles1845114/mcp-server-security-checklist) — Use it when the updated component is an MCP server or changes its tool and authorization surface.
+
 ## License
 
 Original gate state machine and template are available under CC BY 4.0. Linked tools retain their licenses.
+
+If this saved you a decision, star the repo — it is how the next reader finds it.
